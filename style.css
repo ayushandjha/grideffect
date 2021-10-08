@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;
+}
+.grid{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit,minmax(20rem, .9fr));
+    grid-gap: 10px;
+    justify-content: center;
+    
+
+}
+.card{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px 0 rgb(216, 216, 216);
+    
+}
+.backimg{
+    background: url(https://source.unsplash.com/800x450/?nature);
+    height: 10rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    
+
+    
+}
+img{
+     clip-path: circle(60px at center); 
+    width : 200px;
+    margin-top: 4rem;
+}
+h1{
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-top: 8px;
+    transition: .8s;
+}
+p{
+    font-family: sans-serif;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    transition: .8s;
+}
+.card:hover h1{
+    color: white;
+}
+.card:hover p{
+    color: white;
+}
+.effect{
+    background-color: blueviolet;
+    height: 0%;
+    width: 100%;
+    z-index: -3;
+    position: absolute;
+    bottom: 0;
+    transition: .8s;
+
+}
+.card:hover .effect{
+    height: 100%;
+}
